@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 
+
 const EntertainmentCard = (props) => {
     return (
         <>
@@ -58,6 +59,7 @@ const EntertainmentCardSlider=()=>
             },
         ],
       };
+    
       return(
           <div >
           <Slider {...settings}>

@@ -1,16 +1,17 @@
-const settings={
+const Settings={
     infinity: false,
     speed:500,
     slidesToShow: 5,
-    slidesToScroll: 4,
+    slidesToScroll: 2,
     InitialSlide: 0,
+    
     responsive:[
         {
             breakpoint:1024,
             settings:{
                 slidesToShow: 3,
                 slidesToScroll: 3,
-                Infinite: true,
+                Infinity: true,
             },
         },
         {
@@ -32,4 +33,4 @@ const settings={
     ],
   };
 
-  export default settings;
+  export default Settings;
