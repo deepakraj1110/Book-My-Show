@@ -4,7 +4,7 @@ const MovieInfo = () => {
     return (
         <>
         <div className="flex flex-col gap-3 lg:gap-10">
-            <div className="flex items center gap-3 md:px-4">
+            <div className="flex items-center gap-3 md:px-4">
                 <div className="w-40 h-8">
                     <img src="https://in.bmscdn.com/moviemode/tvod/premiere-tag.png"
                     alt="premier"

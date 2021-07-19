@@ -1,6 +1,6 @@
 import React from 'react';
 import EntertainmentCardSlider from '../components/Entertainment/EntertainmentCard.component';
-
+import Quote from '../components/Quote/quote.comonent';
 import PosterSlider from '../components/PosterSlider/PosterSlider.component';
 import PosImages from '../config/TempImages.conjig';
 
@@ -8,6 +8,9 @@ import PosImages from '../config/TempImages.conjig';
 const HomePage = () => {
     return (
         <>
+        <div >
+        <Quote/>
+        </div>
         <div className="container">
         <div className="flex flex-col gap-10">
         <div className="container mx-auto my-20 px-4">
