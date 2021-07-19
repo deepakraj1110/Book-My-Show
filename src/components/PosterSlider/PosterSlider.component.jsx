@@ -4,6 +4,7 @@ import Settings from '../../config/CaroselSettings.config';
 import Poster from '../Poster/poster.component';
 
 const PosterSlider = (props) => {
+  const sliderConfig = props.config ? props.config : Settings;
     return (
         <>
           <div className="py-3 flex flex-col items-start">
@@ -18,10 +19,10 @@ const PosterSlider = (props) => {
             
             
              
-              <Slider {...Settings}>
-         {props.images.map((image)=>(
+         <Slider {...sliderConfig}>
+             {props.images.map((image)=>(
               <Poster {...image} isDark={props.isDark} />
-          ))}
+              ))}
           </Slider>
               
          

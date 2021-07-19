@@ -8,11 +8,13 @@ import PosImages from '../config/TempImages.conjig';
 const HomePage = () => {
     return (
         <>
+        <div className="container">
         <div className="flex flex-col gap-10">
         <div className="container mx-auto my-20 px-4">
         <h1 className="text-2xl font-bold items-start">The Best of Entertainment</h1>
           < EntertainmentCardSlider/> 
           </div>
+          
           <div className="bg-nav-800 py-16 ">
           
             <div className="container mx-auto  px-4" >
@@ -63,6 +65,7 @@ const HomePage = () => {
           title="The Latest Play"
           isDark={false}
         />
+      </div>
       </div>
           
        

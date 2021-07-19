@@ -10,7 +10,7 @@ const MovieInfo = () => {
                     alt="premier"
                     className="w-full h-full" />
                 </div>
-                <span className="bg-nav-800 rounded-md text-white text-xs p-1">Streaming now</span>
+                <span className="bg-nav-800 rounded-md text-white text-xs items-center p-2">Streaming now</span>
             </div>
             <h1 className="text-5xl hidden text-white font-bold lg:block ">Justice League</h1>
             <div className="text-white gap-3 lg:gap-5 flex flex-col-reverse lg:flex-col">
