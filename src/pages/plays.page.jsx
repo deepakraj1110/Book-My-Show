@@ -43,7 +43,7 @@ const Plays = () => {
             </div>
               </div>
                 </div>
-                <div className="hidden lg:flex flex-col w-3/12">
+                <div className="hidden lg:flex flex-col w-3/12 ml-6">
             <h2 className="text-2xl font-bold mb-4">Filters</h2>
             <div>
                 <PlayFilters  title="Date"
@@ -54,7 +54,7 @@ const Plays = () => {
                 tags={["Tamil", "Telegu", "English"]}
               />
               <PlayFilters  title="Categories"
-                tags={["Theatre", ]}
+                tags={["Theatre",]}
               />
               <PlayFilters  title="Date"
                 tags={["Drama", "Comedy", "Historical","Adaption"]}
@@ -63,7 +63,7 @@ const Plays = () => {
                 tags={["Online Streaming", "Kids Allowed", ]}
               />
                 <PlayFilters  title="Price"
-                tags={["Free","0-500","501-2000","Above 2000g" ]}
+                tags={["Free","0-500","501-2000","Above 2000" ]}
               />
             </div>
 
