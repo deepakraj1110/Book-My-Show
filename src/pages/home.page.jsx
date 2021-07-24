@@ -11,7 +11,7 @@ const HomePage = () => {
   const [PopularMovies, setPopularMovies] = useState([]);
   const [Toprated, setToprated] = useState([]);
   const [UpcomingMovies, setUpcomingMovies] = useState([]);
- // const [LatestMovies, setLatestMovies] = useState([]);
+  //const [LatestMovies, setLatestMovies] = useState([]);
 
 
   useEffect(()=>{
@@ -40,7 +40,7 @@ const HomePage = () => {
     requestUpcomingMovies();
   },[]);
 
- /* useEffect(()=>{
+ /*useEffect(()=>{
     const requestLatestMovies=async()=>{
       const getLatestMovies= await axios.get("/movie/latest");
       setLatestMovies( getLatestMovies.data.results)
@@ -48,6 +48,7 @@ const HomePage = () => {
     requestLatestMovies();
   },[]);*/
 
+  
   
     return (
         <>
@@ -61,9 +62,10 @@ const HomePage = () => {
           < EntertainmentCardSlider/> 
           </div>
           
+          
           <div className="bg-nav-800 py-16 ">
           
-            <div className="container mx-auto  px-4" >
+            <div className="container px-4" >
             <div className="hidden md:flex ">
               <img src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png"             
               alt="Rupay"             
