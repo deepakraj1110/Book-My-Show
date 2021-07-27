@@ -1,6 +1,6 @@
 import React,{ useState,useEffect} from "react";
 import Slider from "react-slick";
-
+import {Link,useParams} from 'react-router-dom';
 import { NextArrow,PrevArrow } from "./arrow.comonent";
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -42,12 +42,16 @@ const HeroCarousel= ()=>{
         prevArrow:<PrevArrow/>,
         nextArrow:<NextArrow/>,
       };
+      const{id}=useParams();
 
       
 
 return(
     <>
+    
     <div className="lg:hidden">
+    
+
     <Slider {...settings}>
       {images.map((image)=>(
           <div className="w-20 h-80  py-3 ">
@@ -55,15 +59,20 @@ return(
           </div>
       ))} 
     </Slider>
+    
     </div>
     <div className="hidden lg:block">
+    
+
     <Slider {...settingsLG}>
       {images.map((image)=>(
           <div className="w-20 h-96 px-2 py-3 rounded-md">
-              <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="done" className="w-full h-full"/>
+              <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} onClick={`/movie/${images.id}`} alt="done" className="w-full h-full"/>
           </div>
+         
       ))} 
     </Slider>
+   
     </div>
    
     </>

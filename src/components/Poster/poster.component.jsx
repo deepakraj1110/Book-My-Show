@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 
 const Poster = (props) => {
+   
     return (
         <Link to={`/movie/${props.id}`}>
         <div className="gap-3 px-1 md:px-3 flex flex-col items-start ">
