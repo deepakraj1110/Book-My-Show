@@ -1,46 +1,37 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Poster from '../components/Poster/poster.component'; 
 import PlayFilters from '../components/PlayFilters/PlayFilters.comonent';
+import axios from 'axios';
+
 
 const Plays = () => {
+    const [tv, settv] = useState([]);
+
+
+    useEffect(()=>{
+      const requesttv=async()=>{
+        const gettv= await axios.get("/tv/popular");
+        settv( gettv.data.results)
+      }
+      requesttv();
+     
+    },[]);
+    console.log(tv)
     return (
         <>
         <div className="container mx-auto px-4 my-10">
             <div className=" w-full  lg:flex lg:flex-row-reverse ">
-                <div className="lg:w-3/4">
+                <div className="lg:w-3/4 ">
                 <h2 className="text-2xl font-bold mb-4">Plays In Chennai</h2>
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap w-1/2 md:w-1/3 lg:w-3/12 my-3 ">
            
-              <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3">
-             <Poster 
-             src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00309696-fsqhgswrqc-portrait.jpg"
-             title="`Kanthamathi` (Sadarame) Surabhi Theatre Play"
-             subtitle="Telugu -> ₹400"/>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3">
-             <Poster 
-             src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00309696-fsqhgswrqc-portrait.jpg"
-             title="`Kanthamathi` (Sadarame) Surabhi Theatre Play"
-             subtitle="Telugu -> ₹400"/>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3">
-             <Poster 
-             src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00309696-fsqhgswrqc-portrait.jpg"
-             title="`Kanthamathi` (Sadarame) Surabhi Theatre Play"
-             subtitle="Telugu -> ₹400"/>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3">
-             <Poster 
-             src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00309696-fsqhgswrqc-portrait.jpg"
-             title="`Kanthamathi` (Sadarame) Surabhi Theatre Play"
-             subtitle="Telugu -> ₹400"/>
-            </div>
-            <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3">
-             <Poster 
-             src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24/et00309696-fsqhgswrqc-portrait.jpg"
-             title="`Kanthamathi` (Sadarame) Surabhi Theatre Play"
-             subtitle="Telugu -> ₹400"/>
-            </div>
+              {tv.map((tvdata)=>
+              
+             <Poster {...tvdata} className="flex flex-wrap "/>)} 
+            
+            
+           
+            
               </div>
                 </div>
                 <div className="hidden lg:flex flex-col w-3/12 ml-6">

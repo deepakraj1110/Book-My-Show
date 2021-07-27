@@ -42,7 +42,7 @@ const HeroCarousel= ()=>{
         prevArrow:<PrevArrow/>,
         nextArrow:<NextArrow/>,
       };
-      const{id}=useParams();
+   
 
       
 
@@ -55,7 +55,10 @@ return(
     <Slider {...settings}>
       {images.map((image)=>(
           <div className="w-20 h-80  py-3 ">
+             <Link to={`/movie/${image.id}`}>
               <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="done" className="w-full h-full"/>
+              </Link>
+
           </div>
       ))} 
     </Slider>
@@ -67,7 +70,9 @@ return(
     <Slider {...settingsLG}>
       {images.map((image)=>(
           <div className="w-20 h-96 px-2 py-3 rounded-md">
+             <Link to={`/movie/${image.id}`}>
               <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} onClick={`/movie/${images.id}`} alt="done" className="w-full h-full"/>
+              </Link>
           </div>
          
       ))} 
